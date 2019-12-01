@@ -1,0 +1,36 @@
+{
+  "name": "nodejs-rest-api",
+  "version": "1.0.0",
+  "description": "Learning REST API services using expressjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nagabhushana25/nodejs-rest-api.git"
+  },
+  "keywords": [
+    "nodejs-api"
+  ],
+  "author": "Naga",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nagabhushana25/nodejs-rest-api/issues"
+  },
+  "homepage": "https://github.com/nagabhushana25/nodejs-rest-api#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "pg": "^7.14.0",
+    "validator": "^12.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.1"
+  }
+}
