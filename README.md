@@ -28,6 +28,17 @@ package.json will get updated as below
 }
 
 
+Add .env in project root directory with following varaibles
+DB_HOST=localhost
+DB_USER=<user>
+DB_PASS=<password>
+DB_DATABASE=<database>
+DB_PORT=5432
+JWT_KEY=<key>
+SERVER_PORT=3000
+
+
+
 Run :
 DEBUG=node-api-postgres:* npm start
 
