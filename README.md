@@ -26,3 +26,9 @@ package.json will get updated as below
 "devDependencies": {
   "nodemon": "^2.0.1"
 }
+
+
+Run :
+DEBUG=node-api-postgres:* npm start
+
+Test in Postman for authenication
