@@ -11,30 +11,31 @@ Install all require packages
 npm install bcryptjs cookie-parser cors dotenv express pg validator morgan
 npm install --save-dev nodemon
 
-package.json will get updated as below
-
-"dependencies": {
-  "bcryptjs": "^2.4.3",
-  "cookie-parser": "^1.4.4",
-  "cors": "^2.8.5",
-  "dotenv": "^8.2.0",
-  "express": "^4.17.1",
-  "morgan": "^1.9.1",
-  "pg": "^7.14.0",
-  "validator": "^12.1.0"
-},
-"devDependencies": {
-  "nodemon": "^2.0.1"
-}
 
 
-Add .env in project root directory with following varaibles
+
+
+Add .env in project root directory with following variables
+
+
 DB_HOST=localhost
-DB_USER=<user>
-DB_PASS=<password>
-DB_DATABASE=<database>
+
+
+DB_USER=user
+
+
+DB_PASS=password
+
+
+DB_DATABASE=database
+
+
 DB_PORT=5432
-JWT_KEY=<key>
+
+
+JWT_KEY=key
+
+
 SERVER_PORT=3000
 
 
