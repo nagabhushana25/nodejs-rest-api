@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var user_controller = require('../routers/controllers/userController')
+var user_controller = require('../routes/controllers/userController')
 
 
 router.get('/', user_controller.displayUsersList);

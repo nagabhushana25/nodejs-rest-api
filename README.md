@@ -8,7 +8,7 @@ node init
 
 
 Install all require packages
-npm install bcryptjs cookie-parser cors dotenv express pg validator morgan
+npm install bcryptjs cookie-parser cors dotenv express pg validator morgan jsonwebtoken
 npm install --save-dev nodemom
 
 package.json will get updated as below
