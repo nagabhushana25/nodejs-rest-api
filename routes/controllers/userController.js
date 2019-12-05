@@ -1,10 +1,13 @@
-const db =require('../../db/');
+const db =require('../../db/index');
 const {security} = require('../../middleware/keyhash');
+const User = require('../../db/queries/users')
 
 
 exports.displayUsersList = (req,res) => {
 
-  db.query('select user_id,user_login  from condat.usertest'
+  const user = new User();
+
+  db.query(user.selectALL()
   ,(error, results)=>{
     if (error) {
       throw error
@@ -19,15 +22,15 @@ exports.displayUserDetail = (req,res) => {
 
   const id = parseInt(req.params.id)
 
-  db.query(
-    'select * from condat.usertest where user_id=$1'
-    ,[id]
+  const user = new User();
+
+  db.query(user.selectAUser(id)
     ,(error, results)=>{
       if (error) {
         throw error
       }
-     //res.status(200).json(results.rows)
-     res.send(results.rows)
+     res.status(200).json(results.rows)
+     //res.send(results.rows)
   })
 };
 
@@ -54,15 +57,18 @@ exports.createUser =  (req,res) => {
 
 };
 
+
+
 exports.loginUser = (req,res) => {
 
   const {user_login,user_password} = req.body
 
   var secureAPI = new security(user_password,user_login);
 
+  const user = User();
+
   db.query(
-          'select * from condat.usertest where user_login=$1'
-          ,[user_login]
+          user.selectAUserLogin(user_login)
           ,(error, results)=>{
             if (!results) {
               throw new Error({ error: 'Invalid login credentials' })
