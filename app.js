@@ -7,6 +7,7 @@ const port = 3000
 
 //var indexRouter = require('./routers/index');
 var usersRouter = require('./routes/users');
+var metadataRouter = require('./routes/metadata');
 var productRouter = require('./routes/product');
 
 var app = express();
@@ -22,6 +23,7 @@ app.use(cookieParser());
 app.get('/', (req, res) => res.send('Hello World!'))
 app.use('/users', usersRouter);
 app.use('/product', productRouter);
+app.use('/metadata', metadataRouter);
 
 
 // catch 404 and forward to error handler

@@ -18,4 +18,5 @@ router.put('/:id',user_controller.updateUser);
 router.delete('/:id',user_controller.deleteUser);
 
 
+
 module.exports = router;
