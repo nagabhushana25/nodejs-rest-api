@@ -35,6 +35,6 @@
     "xlsx": "^0.15.4"
   },
   "devDependencies": {
-    "nodemon": "^2.0.1"
+    "nodemon": "^2.0.22"
   }
 }
